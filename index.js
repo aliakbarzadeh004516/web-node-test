@@ -1,7 +1,9 @@
 const app = require('express')();
-
+const apiRouter = require("./src/routers");
 require('./startup/db')()
 require('./startup/middlewers')(app);
+
+app.use("/api", apiRouter);
 
 
 

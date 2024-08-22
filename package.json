@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "auto-bind": "^4.0.0",
+    "bcrypt": "^5.1.1",
     "config": "^3.3.12",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
-    "mongoose": "^8.5.3"
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.5.3",
+    "mongoose-timestamp": "^0.6.0"
   }
 }

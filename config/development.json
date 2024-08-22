@@ -1,5 +1,5 @@
 {
     "db":{
-        "address":"mongodb://localhost:27017/myapp"
+        "address":"mongodb://localhost:27017/test"
     }
 }
