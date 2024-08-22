@@ -1,0 +1,7 @@
+{
+    "name":"myapp",
+    "db":{
+        "address":"mongodb://localhost:27017/myapp"
+    },
+    "jwt_key":"skdfljewodasdasdfasfi123214:aasfkahdnl"
+}
