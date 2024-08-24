@@ -17,14 +17,14 @@ module.exports = new (class extends contoroler{
                 code:400
             })
         }
-        user = new this.User(_.pick(req.body ,["name","email","password"]));
+        user = new this.User(_.pick(req.body ,["name","email","password","usertype"]));
         const salt =await bcrypt.genSalt(10);
         user.password =await bcrypt.hash(user.password , salt);
         await user.save()
         this.response({
             res,
             message : "user registered successfuly",
-            data:_.pick(user,["name","email"])
+            data:_.pick(user,["name","email",'usertype'])
         })
     }
 

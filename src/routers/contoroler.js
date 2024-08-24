@@ -1,12 +1,14 @@
 const User = require('./../models/User');
 const autoBind = require('auto-bind');
 const {validationResult} = require('express-validator');
+const Article  =require('./../models/article');
 
 module.exports = class {
     constructor(){
         autoBind(this);
         this.User = User;
-
+        this.Article = Article;
+        
     }
 
 

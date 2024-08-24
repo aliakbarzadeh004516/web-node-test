@@ -10,7 +10,9 @@ module.exports = new class{
             check("password").notEmpty()
             .withMessage('password validatioen error'),
             check('email').isEmail()
-            .withMessage('email validatioen error')
+            .withMessage('email validatioen error'),
+            check('usertype').isIn(["admin",'client','seller'])
+            .withMessage('invalid usertype error')
         ];
     }
     loginvalidatioen(){
