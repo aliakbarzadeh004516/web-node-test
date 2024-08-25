@@ -10,7 +10,7 @@ async function checkToken(req,res,next) {
     }
     try{
         var decoded  =await jwt.verify(token , config.get('jwt_key'));
-        const user =await User.findById(decoded);
+        const user =await User.findById(decoded).populate('assets', 'name price');
         if(!user)
             return res.status(403).send("invalid token");  
         req.user = user;
